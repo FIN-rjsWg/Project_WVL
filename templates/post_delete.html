@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>게시글 삭제</h2>
+  <form action="/posts/{{ post[0] }}/delete" method="post">
+    <button>삭제</button>
+  </form>
+  <form action="/posts/{{ post[0] }}">
+    <button>취소</button>
+  </form>
+{% endblock %}

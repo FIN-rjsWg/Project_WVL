@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1 style="text-align: center;">Hello, {{username}}!</h1>
+   <form action="/posts">
+      <button>게시판</button>
+   </form>
+   <form action="/profile/{{ user_id }}">
+    <button>프로필</button>
+</form>
+   <form action="/logout">
+      <button>로그아웃</button>
+   </form>
+{% endblock %}

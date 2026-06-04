@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h2>게시글 수정</h2>
+  <form action="/posts/{{ post[0] }}/edit" method="post">
+    제목:
+    <br>
+    <input type="text" id="title" name="title" value="{{ post[1] }}">
+    <br>
+    <br>
+    내용:
+    <br>
+    <textarea type="text" id="content" name="content">{{ post[2] }}</textarea>
+    <br>
+    <button>수정하기</button>
+  </form>
+  <br>
+  <form action="/posts/{{ post[0] }}">
+    <button>게시글 목록</button>
+  </form>
+{% endblock %}

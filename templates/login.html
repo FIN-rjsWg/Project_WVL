@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <h1 style="text-align: center;">환영합니다!</h1>
+   <h3 style="text-align: center;">웹 서비스 구축을 연습하는 사이트 입니다. 좋은 시간 되세요!</h3>
+   <form action="/login" method="post"> <!-- /login 주소에서 입력한 내용을 POST 형식으로 넘김. -->
+      아이디:<br>
+      <input type="text" name ="username" placeholder="아이디 입력">
+      <br>
+      비밀번호: <br>
+      <input type="password" name = "password" placeholder="비밀번호 입력">
+      <br>
+      <button type="submit">로그인</button>
+   </form>
+   <br>
+   <form action="/register">
+      <button>회원가입</button>
+   </form>
+{% endblock %}
+
+
