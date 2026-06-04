@@ -1,21 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-   <h2>게시글</h2>
+   <h2>게시글 목록</h2>
    <table>
       <thead>
          <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Author</th>
+            <th>ID</th>
+            <th>제목</th>
+            <th>작성자</th>
          </tr>
       </thead>
       <tbody> <!--전달 받은 게시글 내용인 posts를 출력-->
-      {% for posts in posts %} <!--posts 반복문, post를 반복-->
+      {% for posts in posts %} <!--반복문, posts를 반복-->
       <tr>
-         <td>{{ posts[0] }}</td> <!--게시글 ID 출력-->
-         <td><a href="/posts/{{ posts[0] }}">{{ posts[1] }}</a></td> <!--게시글 제목 출력, 누르면 게시글 내용(ID)으로 이동-->
-         <td>{{ posts[2] }}</td> <!--게시글 작성자 출력-->
+         <td>{{ posts[0] }}</td> <!--[0]: 게시글 ID 출력-->
+         <td><a href="/posts/{{ posts[0] }}">{{ posts[1] }}</a></td> <!--[1]: 게시글 제목 출력, 누르면 게시글 내용(ID)으로 이동-->
+         <td>{{ posts[2] }}</td> <!--[2]: 게시글 작성자 출력-->
       </tr>
       {% endfor %}
       </tbody>

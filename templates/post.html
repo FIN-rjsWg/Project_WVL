@@ -6,10 +6,7 @@
   <pre>{{ post[2]|safe }}</pre> <!--XSS 취약 코드. safe 처리를 통해 입력값을 HTML로 반환함. = JS 실행 가능.-->
   <!--<pre>{{ post[2] }}</pre> 안전한 코드 예시. safe 처리를 하지 않으므로써 HTML Escape가 수행됨.--> 
   <br>
-  <a href="/posts">게시글 목록</a>
-  <br>
-  <a href="/posts/{{ post[0] }}/edit">게시글 수정</a>
-  <br>
-  <a href="/posts/{{ post[0] }}/delete">게시글 삭제</a>
-  <br>
+  <button onclick="location.href='/posts'">게시글 목록</button>
+  <button onclick="location.href='/posts/{{ post[0] }}/edit'">게시글 수정</button>
+  <button onclick="location.href='/posts/{{ post[0] }}/delete'">게시글 삭제</button>
 {% endblock %}
