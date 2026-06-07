@@ -11,7 +11,7 @@
          </tr>
       </thead>
       <tbody> <!--전달 받은 게시글 내용인 posts를 출력-->
-      {% for posts in posts %} <!--반복문, posts를 반복-->
+      {% for posts in posts %} <!--반복문, posts 출력를 반복 -> 목록 출력-->
       <tr>
          <td>{{ posts[0] }}</td> <!--[0]: 게시글 ID 출력-->
          <td><a href="/posts/{{ posts[0] }}">{{ posts[1] }}</a></td> <!--[1]: 게시글 제목 출력, 누르면 게시글 내용(ID)으로 이동-->

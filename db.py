@@ -40,7 +40,7 @@ def add_account(username, password):
     (
         username,
         password,
-        f'{username}의 프로필 정보'
+        f'{username}의 프로필'
     )
 )
         conn.commit()
