@@ -2,19 +2,20 @@
 
 {% block content %}
    <h1>WVL</h1>
-   <form action="/login" method="post">
-      아이디:<br>
-      <input type="text" name ="username" placeholder=" 아이디 입력">
-      <br>
-      비밀번호: <br>
-      <input type="password" name = "password" placeholder=" 비밀번호 입력">
-      <br>
-      <button type="submit">로그인</button>
-   </form>
-   <br>
-   <form action="/register">
-      <button>회원가입</button>
-   </form>
+   <div class="lgn-card">
+         <form action="/login" method="post">
+            아이디:
+            <input type="text" name ="username" placeholder=" 아이디 입력"><br>
+            비밀번호:
+            <input type="password" name = "password" placeholder=" 비밀번호 입력"><br>
+      <div class="btn-group">
+            <button type="submit">로그인</button>
+         </form>
+         <form action="/register">
+            <button>회원가입</button>
+         </form>
+      </div>
+   </div>
 {% endblock %}
 
 

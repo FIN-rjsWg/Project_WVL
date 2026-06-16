@@ -10,7 +10,9 @@
   <!--<pre>{{ post[2] }}</pre> 안전한 코드 예시--> 
   
   <br>
-  <button onclick="location.href='/posts'">게시글 목록</button>
-  <button onclick="location.href='/posts/{{ post[0] }}/edit'">게시글 수정</button>
-  <button onclick="location.href='/posts/{{ post[0] }}/delete'">게시글 삭제</button>
+  <div class="btn-group">
+    <button onclick="location.href='/posts'">게시글 목록</button>
+    <button onclick="location.href='/posts/{{ post[0] }}/edit'">게시글 수정</button>
+    <button onclick="location.href='/posts/{{ post[0] }}/delete'">게시글 삭제</button>
+  </div>
 {% endblock %}
