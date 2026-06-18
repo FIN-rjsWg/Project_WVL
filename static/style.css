@@ -1,75 +1,97 @@
-h1,h2,h3 {
-   text-align: center;
-   color: white;
-}
+/*1. 구조*/
 
-.lgn-card {
-    width: 58%;
-    min-height: 350px;
-    margin: 50px auto;
-    padding: 40px;
-    border: 4px solid gray;
-    /*박스 모델 설계 및 크기 조정*/
-    border-radius: 15px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, gray, white);
+   .lgn-card,.rgs-card
+   {
+      /*박스 모델 설계 및 크기 조정*/
+      width: 58%;
+      min-height: 350px;
+      margin: 50px auto;
+      padding: 40px;
+      border: 4px solid gray;
+      /*디테일*/
+      border-radius: 15px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(45deg, gray, white);
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   /*로그인 요소 중앙 정렬*/
-}
+      /*로그인 요소 중앙 정렬*/
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+   }
 
-.btn-group /*버튼 정렬*/{
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    margin-top: 20px;
-}
+   .btn-group 
+   {
+      /*버튼 그룹 가로 정렬*/
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      margin-top: 20px;
+   }
 
-/*구글 폰트 - Open Sans*/
+   body 
+   {  color: white;
+      background-color: #000000;
+   }
+
+/*2. 텍스트, 글꼴*/
+
+   h1,h2,h3 
+   {
+      text-align: center;
+      color: white;
+   }
+
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-h1 {
-  font-family: "Open Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight:300;
-  font-style:normal;
-  font-variation-settings:
-    "wdth" 100;
-}
+   h1 
+   {
+      /*구글 폰트 - Open Sans*/
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight:300;
+      font-style:normal;
+      font-variation-settings:
+         "wdth" 100;
+   }
 
-body {
-   background-color: #000000;
-   color: white;
-}
+/*3. 상호작용 기능*/
 
-input, textarea {
-margin: 5px;
-background: rgba(255, 255, 255,0.95);
-border-radius: 6px;
-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-backdrop-filter: blur(7.2px);
--webkit-backdrop-filter: blur(7.2px);
-border: 1px solid rgba(255, 255, 255, 0.35);
+   input, textarea 
+   {
+      margin: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 6px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+      background: rgba(255, 255, 255,0.95);
+      backdrop-filter: blur(7.2px);
+      -webkit-backdrop-filter: blur(7.2px);
 /*By https://css.glass/*/
-}
+   }
 
-button {
-   margin-top: 20px;
-   padding: 10px 30px;
-   color:white;
-   border-style: none;
-   border-radius: 8px;
-   border-color: white;
-   background-color: #000000;
-   transition:transform 0.3s ease;
-}
-/*버튼 뜨는 모션 구현*/
-button:hover {
-   background: #297fe8; color: white;
-   transform:translateY(-2px); box-shadow: 5px 5px 10px #5f5f5f;
-   
-}
-button:active {
-   background: white; color: #000000;
-}
+   button
+   {
+      margin-top: 20px;
+      padding: 10px 30px;
+      border-style: none;
+      border-radius: 8px;
+      border-color: white;
+      color:white;
+      background-color: #000000;
+      transition:transform 0.3s ease;
+   }
+
+   button:hover 
+   {
+      /*버튼 호버링 모션*/
+      color: white;
+      background: #267ce6;
+      box-shadow: 5px 5px 10px #5f5f5f;
+      transform:translateY(-2px);
+   }
+
+   button:active
+   {  
+      color: #000000;
+      background: white;
+   }

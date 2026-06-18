@@ -4,14 +4,16 @@
     <h2>회원가입</h2>
     <div class="rgs-card">
       <form action="/register" method="post">
-         사용하실 아이디를 입력해주세요: <br>
+         사용하실 아이디를 입력해주세요:
          <input type="text" id="username" name="username" placeholder="아이디 입력"><br>
-         사용하실 비밀번호를 입력해주세요: <br>
+         사용하실 비밀번호를 입력해주세요:
          <input type="password" id="password" name="password" placeholder="비밀번호 입력"><br>
-         <button type="submit">회원가입</button>
-      </form>
-      <form action="/login">
-         <button>로그인</button>
-      </form>
+      <div class="btn-group">
+            <button type="submit">회원가입</button>
+         </form>
+         <form action="/login">
+            <button>로그인</button>
+         </form>
+      </div>
     </div>
 {% endblock %}
