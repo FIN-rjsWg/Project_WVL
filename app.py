@@ -246,7 +246,7 @@ def get_logout():
 
 
 # =========================
-# Profile (IDOR Lab)
+# Profile
 # =========================
 
 @app.route('/profile/<user_id>', methods=['GET'])
@@ -268,10 +268,10 @@ def get_profile(user_id):
 
 
 # =========================
-# Run
+# 실행
 # =========================
 
 if __name__ == '__main__':
-    # DB 초기화 후 웹 서버 실행
+    # 웹 서버 실행
     init_db()
     app.run(host='0.0.0.0', port=31337)
