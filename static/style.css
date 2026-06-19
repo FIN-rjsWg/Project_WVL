@@ -7,7 +7,7 @@
       min-height: 350px;
       margin: 50px auto;
       padding: 40px;
-      border: 4px solid gray;
+      border: 3.5px solid #715A5A;
       /*디테일*/
       border-radius: 15px;
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
@@ -30,8 +30,8 @@
    }
 
    body 
-   {  color: white;
-      background-color: #000000;
+   {  color: #D3DAD9;
+      background: linear-gradient(90deg,#313037,#666674);
    }
 
 /*2. 텍스트, 글꼴*/
@@ -39,7 +39,7 @@
    h1,h2,h3 
    {
       text-align: center;
-      color: white;
+      color: White;
    }
 
 
@@ -57,18 +57,56 @@
 
 /*3. 상호작용 기능*/
 
-   input, textarea 
+   /* Liquid Glass STYLE
+   Source By: https://freefrontend.com/css-liquid-glass/#google_vignette
+   AI 활용됨.
+   */
+
+   input,
+   textarea
    {
-      margin: 5px;
-      border: 1px solid rgba(255, 255, 255, 0.35);
-      border-radius: 6px;
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-      background: rgba(255, 255, 255,0.95);
-      backdrop-filter: blur(7.2px);
-      -webkit-backdrop-filter: blur(7.2px);
-/*By https://css.glass/*/
+
+      /* 크기 및 텍스트 */
+      width: 100%;
+      padding: 14px 20px;
+      color: #fff;
+      font-size: 16px;
+
+      /*유리 요소*/
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.25);
+      border-radius: 999px;
+      backdrop-filter: blur(12px); /*배경 블러*/
+      -webkit-backdrop-filter: blur(12px);
+      box-shadow:
+         inset 0 1px 0 rgba(255,255,255,.45), /*inset(내부) 그림자  : 상단 광택 표현*/
+         inset 0 -1px 0 rgba(255,255,255,.12),
+         0 8px 20px rgba(0,0,0,.10);
+
+   
+      outline: none; /* 기본 포커스 외곽선 제거 -> 포커스 커스텀 가능 */   
+      transition: .2s; /* 상태 변화 부드럽게 */
+}
+
+   /*Liquid Style Hover, Focus*/
+   input:hover,
+   textarea:hover,
+   input:focus,
+   textarea:focus 
+   {
+      background: rgba(255,255,255,.18);
+      border-color: rgba(255,255,255,.4);
+      box-shadow:
+         inset 0 1px 0 rgba(255,255,255,.45),
+         0 10px 24px rgba(0,0,0,.15);
    }
 
+   input::placeholder,
+   textarea::placeholder
+   {
+      color: rgba(255,255,255,.85);
+   }
+      
    button
    {
       margin-top: 20px;
