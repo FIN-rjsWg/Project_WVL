@@ -229,7 +229,7 @@ def post_login():
     user = check_account(username, password)
 
     if user:
-        # 로그인 성공 시 세션 저장
+        # 로그인 성공 시 세션 정보를 user 인덱스 칸에 저장
         session['user_id'] = user[0]
         session['username'] = user[1]
 
